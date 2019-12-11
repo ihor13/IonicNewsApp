@@ -15,7 +15,7 @@ export class NewsPage implements OnInit {
   ngOnInit() {
     this.newsService
       .getData(
-        `top-headlines?country=us&category=business&pageSize=5&page=${
+        `everything?q=bitcoin&from=2019-08-25&sortBy=publishedAt${
           this.page
         }`
       )
@@ -35,7 +35,7 @@ export class NewsPage implements OnInit {
     console.log(event);
     this.newsService
       .getData(
-        `top-headlines?country=us&category=business&pageSize=5&page=${
+        `everything?q=bitcoin&from=2019-08-25&sortBy=publishedAt${
           this.page
         }`
       )
